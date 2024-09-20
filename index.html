@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+          #toggleDiv {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+     <h1> Dom Partice question and answer</h1>
+     <!-- 1st question -->
+     <!-- <div id="myDiv">
+        <button  id="colorButton">Change color</button>
+     </div> -->
+     <!-- Click on button change the specific color of div -->
+     <!-- <script>
+        let isBlue=false;
+         document.getElementById('colorButton').addEventListener('click', function(){
+          const mydiv=  document.getElementById('myDiv');
+          if(isBlue){
+            mydiv.style.backgroundColor='red'
+          }else {
+            mydiv.style.backgroundColor='blue'
+          }
+          isBlue=!isBlue // toggle the flag
+
+         })
+     </script> -->
+     <!-- 2 when hovor on image then show the alert  -->
+      <!-- <div>
+        <img id="myImage" src="https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=">
+      </div>
+      <script>
+        document.getElementById('myImage').addEventListener('mouseover',
+            function(){
+                alert("Mouse is over the image!'")
+            }
+        )
+      </script> -->
+
+      <!-- 3 how can you prevent the default form submission behavior? -->
+      <!-- <form id="myForm">
+        <input type="text" name="example">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('prv submission ')
+           
+        })
+    </script> -->
+
+    <!-- 4th  Change the pragraph or content -->
+     <!-- <p id="myParaGraph">Original text</p>
+     <button id="changeTextButton">Change text</button>
+    <script>
+        let ResetText=false;
+        document.getElementById('changeTextButton').addEventListener('click',
+            function(){
+              const myParagraph=  document.getElementById('myParaGraph');
+              if(ResetText){
+                myParagraph.textContent="Original text"
+              }else{
+                myParagraph.textContent="hello ji how are yoy"
+              }
+              ResetText=!ResetText
+            }
+          
+        )
+    </script> -->
+    <!-- 5th how can you toggle the visibility of a <div> -->
+        <!-- <div id="toggleDiv"></div>
+        <button id="toggleButton">Toggle Visibility</button>
+      
+        <script>
+     document.getElementById('toggleButton').addEventListener('click', function() {
+            var div = document.getElementById('toggleDiv');
+            div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+        });
+        </script> -->
+
+        <!-- 6th  you add a new item to a list when a button is clicked? -->
+      <!-- <ul id="myList">
+        <li>Item1</li>
+      </ul>
+      <button id="additem">Add item</button>
+      <script>
+        document.getElementById('additem').addEventListener('click', function(){
+            var ul=document.getElementById('myList')
+            var li=document.createElement('li')
+            li.textContent='new item'
+            ul.appendChild(li)
+        })
+      </script> -->
+
+      <!-- 7th  change the background color of a <div> when a user presses a key? -->
+        <!-- <div id="myDiv"></div>
+        <script>
+            document.addEventListener('keydown', function(){
+                document.getElementById('myDiv').style.backgroundColor='red'
+            })
+        </script> -->
+        <!-- 8th user clicks on a checkbox, how can you change the text color of a label? -->
+<!-- 
+        <input type="checkbox" id="myCheckbox">
+    <label id="myLabel" for="myCheckbox">Checkbox Label</label>
+    <script>
+        document.getElementById('myCheckbox').addEventListener('change', function(){
+            document.getElementById('myLabel').style.color=this.checked ? 'red': 'green'
+            console.log(this.checked);
+        })
+    </script> -->
+
+    <!--object -->
+
+    <script>
+      let user={
+        name:"Mantosh",
+        age:33,
+        "liks birds":true
+      }
+     let key="name"
+
+     console.log(user[key]);
+    //  delete user.age;
+    //  console.log(user.age);
+    //  console.log(user["liks birds"]);
+    //  delete user["like birds"]  // delete and access 
+// without using key word create one common object
+function Obj1(name, age){
+  return{
+    name:name,
+    age:age,
+    0:'test'
+  }
+}
+
+// let appname=Obj1("jhon", 33)
+// console.log(appname);
+
+// console.log("user Name", user["name"]);
+ 
+let obj3={
+  0:"test"
+}
+console.log(obj3[0]);
+console.log(obj3["0"]);
+// in object let, const, var, for all take like name in object
+// const obj2={
+//   let:1,
+//   const:2,
+//   for:3
+// }
+// console.log(obj2.let +  obj2.const);
+    
+    </script>
+
+<script>
+  // Array questions
+  
+  // Reverse Array
+  let arr=[1,12,3,4,5,6]
+  arr.reverse()
+  // console.log(arr);
+
+  // find max
+  let max=Math.max(...arr)
+  // console.log(max);
+  let min=Math.min(...arr)
+  // console.log(min);
+
+
+  // Remove dublicate array
+   let uniqueArray=[...new Set(arr)]
+  //  console.log(uniqueArray);
+
+  let sum=arr.reduce((a, b)=>a+b, 0)
+
+    //  console.log(sum);
+
+    let arr2=[9,9, 5,6,7,8]
+    let arr3=arr.concat(arr2)
+    let arr4=[...arr, ...arr2]
+    // console.log(arr4);
+    //  console.log(arr3);
+    // arr2.sort((a, b)=>a-b)   // asc
+    // console.log(arr2);
+    // arr2.sort((a, b)=>b-a)
+    // console.log(arr2);  //desc
+    // console.log(arr2.includes(9));
+
+    let arr5= [1, [2, [3, [4]]]];
+    // console.log(arr5.flat(Infinity));
+    // arr2.splice(2,2)
+    // console.log(arr2);
+    let arr6 = [1, 2, 2,2,2,2,2,2, 3,3, 2, 4];
+      let frequency = arr6.filter(x => x === 3).length;
+      // console.log(frequency); // 3
+      // var array=[25, 8, 7, 41]
+
+      // find largest sum (subarray kandane's alg)
+      let arr7 = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+      let maxsum=arr7[0], currentSum=0;
+      console.log("maxSum", maxsum);
+        function findSubarray(arr){
+          let sunarrays=[];
+          for(let i=0;i<arr.length;i++){
+             console.log("i",i);
+             for(let j=i;j<arr.length;j++){
+              let subarray=[]
+              console.log("here j",j);
+              for(let k=i;k<=j;k++){
+              console.log("here k", k);
+                subarray.push(arr[k])
+             }
+             sunarrays.push(subarray)
+             }
+             
+             
+            
+          }
+          return sunarrays
+        }
+        let arr9=[-2, 1, -3, 4, -1, 2, 1, -5, 4];
+      //  console.log( findSubarray(arr9));
+
+      let maxsum1=arr9[0] , currentSum1=0;
+      for(let i=0;i<arr.length;i++){
+        currentSum1=Math.max(arr9[i], currentSum1+arr9[i])
+         maxsum1=Math.max(maxsum1, currentSum1)
+        
+      }
+   console.log(maxsum1);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
